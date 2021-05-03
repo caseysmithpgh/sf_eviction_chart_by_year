@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <title>Chart Timeline - SF Eviction Notices</title>
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto">
+      </div>
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Year', 'Number of Eviction Notices'],
+          ['1997',     2487],
+          ['1998',      2894],
+          ['1999',  2613],
+            ['2000',  2567],
+            ['2001',  2175],
+            ['2002',  1649],
+            ['2003',  1510],
+            ['2004',  1429],
+            ['2005',  1529],
+            ['2006',  1469],
+            ['2007',  1477],
+            ['2008',  1411],
+            ['2009',  1170],
+            ['2010',  1353],
+            ['2011',  1282],
+            ['2012',  1621],
+            ['2013',  1856],
+            ['2014',  1975],
+            ['2015',  2091],
+            ['2016',  2127],
+            ['2017',  1550],
+            ['2018',  1626],
+            ['2019',  1435],
+            ['2020',  778],
+            ['2021', 168]
+            ]);
+
+            var options = {title: 'San Francisco Eviction Notices by Year'}; 
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+   </body>
+</html>
+
+       
